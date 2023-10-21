@@ -1,0 +1,254 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.banner{
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 7.5vh;
+    opacity: 0.35;
+    width: 100vw;
+    background-color: black;
+}
+
+.placeHolder{
+    height: 7.5vh;
+    display: block;
+    background-color: red;
+}
+
+.mainGallery{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    width: 100vw;
+    height: 85vh;
+
+}
+.mainGallery.filtered{
+    grid-template-columns: 0.5fr 9fr;
+
+    transition: all 0.1s ease-in;
+
+}
+
+.filters{
+    background-color: aquamarine;
+   /* display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    align-items: center;
+*/
+}
+
+
+.GalleryItems{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows:5fr 5fr 1fr ;
+    background-color: red;
+}
+
+.item{
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: solid 2px red;
+
+
+}
+.item img{
+    object-fit: fill;
+    width:100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+.item .desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.GalleryItems .pagination{
+    grid-column:span 2;
+    background-color: bisque;
+}
+
+.footer{
+    grid-column: span 2;
+    height: 7.5vh;
+    background-color: aqua;
+
+}
+.pricingFilter{
+    position:relative;
+}
+.pricingSliderMin{
+    
+    left: 0%;
+    /*transform: rotate(180deg);
+    */width: 50%;
+}
+.pricingSliderMax{
+    border-right: none !important;
+    left: 50%;
+    width: 50%;
+}
+.pricingSliderMax,.pricingSliderMin{
+    border-left: none !important  ;
+    position:absolute;
+    z-index: 12;
+    padding: 0px;
+    
+    
+}
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 50%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+  height: 100%;
+  width: 5%;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+
+  }
+
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 100%;
+    width: 5%;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    
+  }
+
+  input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 100%;
+    width: 5%;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+  input[type=range]::-ms-track {
+    width: 50%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #367ebd;
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: #3071a9;
+    /*
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+*/  
+}
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+  }
+  #min{
+    width: 40%;
+    margin-right: 5%;
+  }
+  #max{
+    width:40%;
+  }
+  #anotherPlaceHolder{
+    opacity: 0;
+    display: block;
+    position: static;
+    width: 1px;
+    z-index: -100;
+    pointer-events: none;
+  }
+  #ratingSlider{
+    position: static;
+  }
+
+  .filters *{
+    margin: 1px;
+
+  }
+  .contentFilter *{
+    display: block;
+    margin: 10px;
+  }
+  

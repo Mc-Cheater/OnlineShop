@@ -1,0 +1,28 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.banner{
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 7.5vh;
+    opacity: 0.35;
+    width: 100vw;
+    background-color: black;
+}
+
+.banner *{
+    border: solid 1 whitesmoke;
+}
+
+.placeHolder{
+    height: 7.5vh;
+    display: block;
+    background-color: red;
+}

@@ -1,0 +1,348 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: rgba(168, 158, 158, 0.14);
+}
+
+.homeContainer{
+    display:grid;
+    grid-template-columns: minmax(50px,0.5fr) 2fr 1fr 1fr ;
+    grid-template-rows: minmax(50px,5vh) 0px minmax(175px,29vh) 0px minmax(175px,29vh) 0px minmax(175px,29vh) auto;
+}
+/*
+body{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 150vh;
+    
+}*/
+
+.scrollerContainer{
+/*
+    width: clamp(400px,60vw,60vw);
+    max-width: 60vw;
+  */  
+    overflow: hidden;
+
+    --webkit-mask:linear-gradient(90deg,transparent,white 20%, white 80%,transparent);
+
+    mask: linear-gradient(90deg,transparent,white 10%, white 90%,transparent);
+
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+}/*
+.scrollerContainer[animated="true"]
+{
+
+    overflow: hidden;
+
+    --webkit-mask:linear-gradient(90deg,transparent,white 20%, white 80%,transparent);
+
+    mask: linear-gradient(90deg,transparent,white 20%, white 80%,transparent);
+}*/
+
+@keyframes scroll{
+    to{
+        transform: translateX(-50%);
+
+    }
+}
+
+.scrollerContainer .cardFlexContainer
+{   width: fit-content;
+    height: 100%;
+    flex-wrap: nowrap;
+    animation: scroll 40s linear infinite;
+    list-style: none;
+}
+
+
+
+.cardFlexContainer{
+display: flex;
+gap: 15px;
+flex-wrap: nowrap;
+min-height: 150px;
+
+}
+
+.card *{
+    background-color: white;
+}
+.card button{
+    background-color: aliceblue;
+    border-radius: 5px 5px 5px 5px;
+    width: 40%;
+    
+    
+}
+.card button:hover{
+    transform: scale(1.2,1.1);
+    transition: all 0.5s ease-in 0.1s;
+}
+.card{
+    border-radius: 25px 25px 25px 25px;
+    border: solid gainsboro 2px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    justify-items: flex-start;
+    align-items: center;
+    gap: 1px;
+    text-justify: distribute;
+    min-width: max(25vw,250px);
+    position: relative;
+}
+.card .imageContainer{
+    flex-grow: 1.5;
+    flex-shrink: 1;
+    height: 80%;
+    width:80%;
+    max-width: 100%;
+    max-height: 100%;
+    
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.card .productImage{
+    object-fit: contain;
+    height: 100%;
+    width:100%;
+    max-width: 100%;
+    max-width: 100%;
+    min-width: 0px;
+    min-height: 0px;
+}
+.card .productTitle {
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: inline;
+}
+
+.card .productText{
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: inline;
+}
+.card .productButton{
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+.productText{
+    font-family: 'Times New Roman', Times, serif;
+    
+    flex:1;
+    flex-shrink: 1;
+    height: 100%;
+    min-height: 50%;
+    overflow: visible;
+    
+    
+}
+
+.pausedAni{
+    animation-play-state: paused !important;
+}
+
+.scrollerContainer.smaller{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    max-width: 77.770vw;
+    width: 77.77vw;
+}
+
+
+/* logo styling           */
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+}
+#logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+    object-fit: contain;
+    height: 100%;
+    width:100%;
+    max-width: 100%;
+    max-width: 100%;
+
+}
+#logo a img{
+
+    object-fit: contain;
+    height: 100%;
+    width:100%;
+    max-width: 100%;
+    max-width: 100%;
+}
+
+/* navbar Styling*/
+
+#navbar{
+grid-column-start: 2;
+grid-column-end: 4;
+display: flex;
+font-weight: bold;
+text-transform: uppercase;
+align-items: center;
+justify-content: space-around;
+
+}
+
+#navbar a:hover{
+    transform: scale(1.2,1.1);
+    transition: all 0.3s linear 0.05s;
+}
+#navbar a {
+    text-decoration: none;
+    text-decoration-color: none;
+    color: black;
+}
+
+#navbar a:hover{
+    background-color:rgb(110, 105, 105);   
+    padding: 15px; 
+}
+
+#logo a:active,a:hover{
+    background-color:lightgray;   
+    padding: 0px; 
+}
+
+
+
+/* login cart and search buttons */
+#topRightEdge{
+    display: flex;
+
+}
+/**/
+footer{
+    grid-column-start:1 ;
+    grid-column-end: 5;
+display: flex;
+
+
+}
+.scrollerHeader{
+    text-align: center;
+    color: crimson;
+    grid-column-start:1;
+    grid-column-end: 5;
+    overflow: visible;
+    z-index: 50;
+    opacity: 0.5;
+    font-size: x-large;
+}
+.scrollerHeader.smaller{
+    text-align: center;
+    color: crimson;
+    grid-column-start:1;
+    grid-column-end: 4;
+}
+.searchContainer{
+    display: flex;
+    align-items: center;
+    justify-items: flex-start;
+}
+
+.loginForm{
+    display:grid;
+    row-gap: 20px;
+    column-gap: 5px;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+    grid-row-start: 2 ;
+    grid-row-end: 4;
+    grid-column-start:4; 
+    grid-column-end: 6;
+}
+
+.loginForm input[type="submit"]{
+    width: 50%;
+    border-radius: 15px 15px 15px 15px;
+    grid-column: span 2;
+}
+
+.loginForm button{
+    width: 50%;
+    border-radius: 15px 15px 15px 15px;
+    
+}
+/*
+.homeContainer:nth-child(-n+3){
+    background-color: red;
+}*/
+.panierCount{
+    position: absolute;
+    top:0.5vh;
+    right: 0.25vw;
+    padding: 1px;
+    border: solid rgba(255,0,0, 0.4) 1px;
+    border-radius: 5em;
+    background-color: rgba(255,0,0, 1);
+
+    color: white;
+    font: 0.8em sans-serif;
+
+}
+
+.panierCount.panierAnimate{
+    animation: bounce 0.5s ;
+}
+
+@keyframes bounce {
+    0%   {background-color: red;}
+  25%  { transform: scale(1.2,1.2);
+    background-color: yellow;}
+  50%  {transform: scale(1.1,1.1);
+    background-color: red;}
+  100% {background-color: red;
+    transform: scale(1,1);
+} 
+}
+
+.productDescription{
+    text-transform: capitalize;
+   
+}
+.productTitle{
+    text-transform: capitalize;
+   /* text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 90%;
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 50%;
+    width:80%;*/
+}
+@media only screen and (max-width: 1100px) {
+    .productTitle,.productDescription{
+        font-size: small;
+        transition: all 0.2s ease-in;
+    }
+  }

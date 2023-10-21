@@ -1,0 +1,71 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.banner{
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 10dvh;
+    opacity: 0.35;
+    width: 100vw;
+    background-color: black;
+}
+
+.banner *{
+    border: solid 1 whitesmoke;
+}
+
+.placeHolder{
+    height: 7.5dvh;
+    display: block;
+    background-color: red;
+}
+.sliderContainer{
+    position:absolute;
+    top: 7.5dvh;
+    width: 100vw;
+    height: 50dvh;
+    background-color: gray;
+}
+.sliderImage{
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+}
+.sliderDetails{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top:0%;
+    z-index: 2;
+    background-color: black;
+    color: white;
+}
+.comments{
+width: 100vw;
+height: 32.5dvh;
+position: absolute;
+top: 57.5dvh;
+left:0%;
+transform: rotateX(90deg);
+background-color: blue;
+}
+.comments.ontop{
+    transform: rotateX(0deg);
+    transition: all 0.1s ease-in-out;
+}
+
+.footer{
+    position: absolute;
+    top:90dvh;
+    height: 10dvh;
+background-color: rebeccapurple;
+width: 100vw;
+}

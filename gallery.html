@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Gallery.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="logo">
+
+        </div>
+        <div class="navbar"></div>
+        <div class="searchArea"></div>
+    </div>
+    <div class="placeHolder"></div>
+    <div class="mainGallery">
+        <div class="filters">
+            <form>
+            <h1>Filters </h1>
+            <h3>Price:</h3>
+            <label for="priceSlider"><span>
+                <input type="text" name="" id="min" placeholder="minimum">
+            </span>
+            <span>
+                <input type="text" name="" id="max" placeholder="maximum">
+            </span>
+        </label>
+            <div class="pricingFilter">
+                
+                <input type="range" name="pricingMin" id="priceSliderMax" class="pricingSliderMax">
+                <input type="range" name="pricingMax" id="priceSliderMin" class="pricingSliderMin">
+                
+                
+            </div>
+            <input type="range" name="pricingMax" id="anotherPlaceHolder" class="pricingSliderMin" value="0">
+                
+            <h3>Textual Filters</h3>
+            
+            <div class="contentFilter">
+                <label for="titleFilter">Title contains:</label>
+                <input type="text" placeholder="keyword in title" id="titleFilter">
+                
+                <label for="descriptionFilter">Title contains:</label>
+                <input type="text" placeholder="keyword in description" id="descriptionFilter">
+
+            </div>
+            
+            <div class="ratingFilter"></div>
+            <input type="range" name="pricingMin" id="ratingSlider" class="pricingSliderMax">
+                
+            <ul class="categoriesFilter"></ul>
+        </form>
+        </div>
+        <div class="GalleryItems">
+            <div class="item">
+                <img class="productImage">
+                <div class="desc">
+                            <h3 class="productTitle">Product one</h3>
+
+                            <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quae repellat perspiciatis totam, quo tempore.</p>
+                            <h5 class="productRating">
+                            </h5>
+                            <h4 class="productPricing"></h4>
+                            <div>
+                                <button class="productCartButton">Add To Cart</button>
+                                <button class="productDetailsButton">See in Details</button>
+                            </div>
+                </div>
+            </div>
+            <div class="pagination"></div>
+
+        </div>
+    </div>
+<div class="footer"></div>
+
+<script src="./gallery.js" defer></script>
+</body>
+</html>
