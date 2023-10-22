@@ -474,6 +474,10 @@ divi.id=str+"ID";
 divi.classList.add("navLink");
 divi.href="./"+str.toLowerCase()+".html";
 divi.innerText=str;
+if(str==="Home"){
+  divi.href="./#";
+}
+
 navigation.appendChild(
 divi
 );
@@ -667,3 +671,8 @@ registeredUsers.forEach((credential)=>{
 })
 
 })
+
+sessionStorage.setItem("navbar",JSON.stringify(navigation.cloneNode(true)));
+sessionStorage.setItem("logo",JSON.stringify(logoDiv.cloneNode(true)));
+sessionStorage.setItem("searchArea",JSON.stringify(searchArea.cloneNode(true)));
+sessionStorage.setItem("stored","true");

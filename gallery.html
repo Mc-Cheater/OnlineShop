@@ -8,24 +8,18 @@
     <link rel="stylesheet" href="Gallery.css">
 </head>
 <body>
-    <div class="banner">
-        <div class="logo">
-
-        </div>
-        <div class="navbar"></div>
-        <div class="searchArea"></div>
-    </div>
-    <div class="placeHolder"></div>
+    
+    <div class="placeHolder" id="firstplaceHolder"></div>
     <div class="mainGallery">
         <div class="filters">
             <form>
             <h1>Filters </h1>
             <h3>Price:</h3>
             <label for="priceSlider"><span>
-                <input type="text" name="" id="min" placeholder="minimum">
+                <output for="priceSlider"  name="outputMin" id="min" placeholder="minimum" style="margin-left: 10%;">minimum</output>
             </span>
-            <span>
-                <input type="text" name="" id="max" placeholder="maximum">
+            <span style="position: relative;">
+                <output  name="outputMax" id="max" placeholder="maximum">maximum</output>
             </span>
         </label>
             <div class="pricingFilter">
@@ -37,21 +31,26 @@
             </div>
             <input type="range" name="pricingMax" id="anotherPlaceHolder" class="pricingSliderMin" value="0">
                 
-            <h3>Textual Filters</h3>
+            <h3>Filter by name</h3>
             
             <div class="contentFilter">
                 <label for="titleFilter">Title contains:</label>
                 <input type="text" placeholder="keyword in title" id="titleFilter">
                 
-                <label for="descriptionFilter">Title contains:</label>
+                <label for="descriptionFilter">description contains:</label>
                 <input type="text" placeholder="keyword in description" id="descriptionFilter">
 
             </div>
             
+            <h4>Minimum Rating</h4>
             <div class="ratingFilter"></div>
             <input type="range" name="pricingMin" id="ratingSlider" class="pricingSliderMax">
-                
-            <ul class="categoriesFilter"></ul>
+            <h5>select a category</h5><div> 
+            <select class="categoriesFilter">
+                <option>Categorie 1</option>
+            </select>
+        </div>
+        <button type="submit"> browse Products</button>
         </form>
         </div>
         <div class="GalleryItems">
