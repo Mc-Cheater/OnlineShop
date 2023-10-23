@@ -12,10 +12,84 @@
     top: 0px;
     left: 0px;
     height: 7.5vh;
-    opacity: 0.35;
     width: 100vw;
-    background-color: black;
+    background-color: rgb(136, 130, 130);
 }
+
+
+
+
+
+#logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+}
+#logo a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+  height: 7.5vh;
+  
+  
+  max-width: 100%;
+  max-height: 100%;
+
+}
+#logo a img{
+
+  object-fit: fill;
+  height: 100%;
+ 
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+#navbar{
+  display: flex;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: space-around;
+  
+  }
+  
+  #navbar a:hover{
+      transform: scale(1.2,1.1);
+      transition: all 0.3s linear 0.05s;
+  }
+  #navbar a {
+      text-decoration: none;
+      text-decoration-color: none;
+      color: black;
+  }
+  
+  #navbar a:hover{
+      background-color:rgb(110, 105, 105);   
+      padding: 15px; 
+  }
+  
+  #logo a:active,a:hover{
+      background-color:lightgray;   
+      padding: 0px; 
+  }
+  
+  .searchContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+
+
+
 
 .placeHolder{
     height: 7.5vh;
@@ -27,7 +101,7 @@
     display: grid;
     grid-template-columns: 1fr 4fr;
     width: 100vw;
-    height: 85vh;
+    height: 95vh;
 
 }
 .mainGallery.filtered{
@@ -73,12 +147,12 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr ;
-    grid-template-rows:5fr 5fr 1fr ;
-    background-color: red;
+    grid-template-rows:1fr 1fr 0.1fr ;
+   
 }
 
 .item{
-    background-color: blue;
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: solid 2px red;
@@ -86,7 +160,7 @@
 
 }
 .item img{
-    object-fit: fill;
+    object-fit: contain;
     width:100%;
     height: 100%;
     max-width: 100%;
@@ -143,12 +217,12 @@ input[type=range] {
   input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: 1px solid #000000;
-  height: 100%;
-  width: 5%;
+  height: 200%;
+  width: 10%;
   border-radius: 3px;
   background: #ffffff;
   cursor: pointer;
-  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  margin-top: -2.5%; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
 
   }
@@ -182,6 +256,8 @@ input[type=range] {
 
   input[type=range]:focus {
     outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    transform: scale(1.1,1.3);
+    transition: all 0.3s ease-in ;
   }
   
   input[type=range]::-ms-track {
@@ -274,4 +350,26 @@ input[type=range] {
     display: block;
     margin: 10px;
   }
-  
+  .pagination{
+    display: flex;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  width: 100%;
+  height: 100%;
+
+  }
+
+  .pagination>button{
+    background-color: rgb(32, 218, 172);
+    border: 1 solid blue;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.5em;
+    padding: 25px;
+    color: #024f92;
+  }

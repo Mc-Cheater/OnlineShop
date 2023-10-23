@@ -460,7 +460,7 @@ const logoImage=document.createElement("img");
 const logoAnchor=document.createElement("a");
 
 logoImage.src="./logo.png";
-logoAnchor.href="#";
+logoAnchor.href="./index.html";
 logoDiv.id="logo";
 logoDiv.appendChild(logoAnchor);
 logoAnchor.appendChild(logoImage);
@@ -475,7 +475,7 @@ divi.classList.add("navLink");
 divi.href="./"+str.toLowerCase()+".html";
 divi.innerText=str;
 if(str==="Home"){
-  divi.href="./#";
+  divi.href="./index.html";
 }
 
 navigation.appendChild(
@@ -672,7 +672,7 @@ registeredUsers.forEach((credential)=>{
 
 })
 
-sessionStorage.setItem("navbar",JSON.stringify(navigation.cloneNode(true)));
-sessionStorage.setItem("logo",JSON.stringify(logoDiv.cloneNode(true)));
-sessionStorage.setItem("searchArea",JSON.stringify(searchArea.cloneNode(true)));
+sessionStorage.setItem("navbar",navigation.outerHTML);
+sessionStorage.setItem("logo",logoDiv.outerHTML);
+sessionStorage.setItem("searchArea",searchArea.outerHTML);
 sessionStorage.setItem("stored","true");

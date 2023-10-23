@@ -9,7 +9,7 @@
 .homeContainer{
     display:grid;
     grid-template-columns: minmax(50px,0.5fr) 2fr 1fr 1fr ;
-    grid-template-rows: minmax(50px,5vh) 0px minmax(175px,29vh) 0px minmax(175px,29vh) 0px minmax(175px,29vh) auto;
+    grid-template-rows: minmax(50px,5vh) 0px minmax(175px,29vh) 0px minmax(175px,29vh) 0px minmax(175px,29vh) minmax(auto,8vh);
 }
 /*
 body{
@@ -264,7 +264,7 @@ display: flex;
 .searchContainer{
     display: flex;
     align-items: center;
-    justify-items: flex-start;
+    justify-content: flex-end;
 }
 
 .loginForm{
@@ -278,6 +278,7 @@ display: flex;
     grid-row-end: 4;
     grid-column-start:4; 
     grid-column-end: 6;
+    width: 22.23vw;
 }
 
 .loginForm input[type="submit"]{
@@ -346,3 +347,4 @@ display: flex;
         transition: all 0.2s ease-in;
     }
   }
+
